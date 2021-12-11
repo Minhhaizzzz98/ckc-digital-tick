@@ -1,0 +1,49 @@
+@import "../../../styles/helpers.scss", "../../../styles/palette.scss", "../../../styles/typography.scss";
+.navbar {
+    width: 100%;
+    display: flex;
+    max-width: 1600px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0px;
+
+    &__title {
+        font-size: rem(20px);
+        @include SFProBold;
+        color: $blackPrimary;
+        z-index: 3;
+        &:hover {
+            cursor:pointer;
+            color: $primaryBlue;
+        }
+    }
+    
+    &__socials {
+        width: 210px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 3;
+    }
+}
+.menu {
+    position: absolute;
+    left: 0px;
+    top: 63.5px;
+    right: 0px;
+    z-index: 2;
+    text-align: center;
+    &__item {
+        @include SFProRegular;
+        color: $blackPrimary;
+        font-size: rem(16px);
+        margin: 0 40px;
+        &:hover {
+            cursor: pointer;
+        }
+        &--active {
+            color: $primaryBlue;
+            border-bottom: 1px solid $primaryBlue;
+        }
+    }
+}
